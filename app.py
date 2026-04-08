@@ -12,7 +12,8 @@ def string():
   return "Neki ne preterano dugacak text"
 @app.route("/primer-broj")
 def broj():
-  return 265
+  return"125"
+if_name_ == "_main_"
 @app.route("/primer-niz")
 def niz():
   nekiNiz=[1,2,3,4,5]
