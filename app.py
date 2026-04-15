@@ -6,13 +6,21 @@ from flask_cors import CORS
 app = Flask(_name_)
 @app.route("/")
 def index():
-  return "Zdravo brate"
-@app.route("/primer-string")
-def string():
-  return "Neki ne preterano dugacak text"
-@app.route("/primer-broj")
-def broj():
-  return"125"
+  nazivSpiska="Spisak restorana"
+  spisakRestorana=["pastica", "pica tim", "HasHub", "Sahara"]
+  return render_template("index.html", naziv=nazivSpiska, spisak=spisakRestorana)
+  
+@app.route("/restorani")
+def restorani():
+  nazivRestorana="Spisak restorana"
+  spisakRestorana=["pastica", "pica tim", "HasHub", "Sahara"]
+  return render_template("restorani.html", naziv=nazivRestorana, spisak=spisakRestorani)
+  
+@app.route("/restorani/1")
+def meni():
+  nazivMeni="Meni restorana"
+  spisakMeni=["pastica", "pica tim", "HasHub", "Sahara"]
+  return render_template("meno.html", naziv=nazivMeni, spisak=spisakMeni)
 if_name_ == "_main_"
 @app.route("/primer-niz")
 def niz():
