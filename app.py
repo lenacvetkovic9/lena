@@ -11,11 +11,11 @@ def index():
   return render_template("index.html", naziv=nazivSpiska, spisak=spisakRestorana)
 
 
-@app.route("/restorani")
-def restorani():
-  nazivRestorana="Spisak restorana"
-  spisakMenija=["pastica", "pica tim", "HasHub", "Sahara"]
-  return render_template("restorani.html", naziv=nazivRestorana, spisak=spiakMenija)
+@app.route("/restoran")
+def restoran():
+  nazivRestorana="Meni"
+  spisakMenija=["sendvic", "pasta", "pica", "tortilja"]
+  return render_template("restoran.html", naziv=nazivRestorana, spisak=spiakMenija)
   
 @app.route("/restorani/1")
 def meni():
