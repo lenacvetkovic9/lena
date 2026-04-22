@@ -21,7 +21,8 @@ def restoran():
 @app.route("/primer-niz")
 def niz():
   nekiNiz=[1,2,3,4,5]
-@ap.route("/primer-json)
+
+@ap.route("/primer-json")
 def primerJson():
   data={
     "message": "This is a JSON response",
